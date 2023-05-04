@@ -1,11 +1,21 @@
 import { StyleSheet } from 'react-native';
 
+export const colors = {
+  primary: 'tomato',
+  ligth: 'white',
+};
+
 export const styles = StyleSheet.create({
   goblalMargin: {
     margin: 20,
   },
   title: {
     fontSize: 30,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  subTitle: {
+    fontSize: 25,
     marginBottom: 10,
   },
   bigButton: {
