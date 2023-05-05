@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import Icon from 'react-native-vector-icons/Ionicons';
 import { Text, View } from 'react-native';
 import { styles } from '../theme/appThme';
+import { TouchableIcon } from '../components/TouchableIcon';
 
 export const Tab1Screen = () => {
   useEffect(() => {
@@ -11,10 +11,12 @@ export const Tab1Screen = () => {
   return (
     <View style={styles.goblalMargin}>
       <Text>Icons</Text>
-      <Text>
-        {/* <Icon name="airplane-outline" size={80} color="#900" /> */}
-        'hola'
-      </Text>
+
+      <TouchableIcon name="airplane-outline" />
+      <TouchableIcon name="grid-outline" />
+      <TouchableIcon name="business-outline" />
+      <TouchableIcon name="medal-outline" />
+      <TouchableIcon name="planet-outline" />
     </View>
   );
 };

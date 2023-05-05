@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-// import { StackNavigator } from './src/navigator/StackNavigator';
-import { BasicDrawer } from './src/navigator/BasicDrawer';
 import { SideMenu } from './src/navigator/SideMenu';
-import { Tabs } from './src/navigator/Tabs';
+import { AuthProvider } from './src/context/AuthContext';
 
 const App = () => {
   return (
     <NavigationContainer>
-      {/* <Tabs /> */}
-      <SideMenu />
-      {/* <StackNavigator /> */}
+      <AppState>
+        <SideMenu />
+      </AppState>
     </NavigationContainer>
   );
+};
+
+const AppState = ({ children }: { children: ReactNode }) => {
+  return <AuthProvider>{children}</AuthProvider>;
 };
 
 export default App;
